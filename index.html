@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(-45deg, #ff6ec4, #7873f5, #42e695, #ffe985);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1200px;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+      transform-style: preserve-3d;
+      animation: bounce 3s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px) rotateY(10deg); }
+    }
+
+    .title {
+      font-size: 3em;
+      font-weight: bold;
+      animation: flip 6s infinite;
+      display: inline-block;
+    }
+
+    @keyframes flip {
+      0%   { transform: rotateY(0); }
+      25%  { transform: rotateY(90deg); }
+      50%  { transform: rotateY(180deg); }
+      75%  { transform: rotateY(270deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out 1;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .glow {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
+                   0 0 30px #ff00ff, 0 0 40px #ff00ff, 
+                   0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title glow">Coming Soon</div>
+    <div class="subtitle">We’re working on something amazing! Stay tuned 🚀</div>
+  </div>
+</body>
+</html>
